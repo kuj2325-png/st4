@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ 아코디언 UI 작업</title>
+  <link rel="stylesheet" href="faq.css">
+</head>
+<body>
+  <!-- FAQ 콘텐츠 3개를 포함한 아코디언 UI -->
+  <div class="accordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header">질문 1: 아코디언 UI란 무엇인가요?</h2>
+      <div class="accordion-content">
+        <p>아코디언 UI는 사용자가 클릭하여 내용을 확장하거나 축소할 수 있는 인터페이스입니다. 주로 FAQ 페이지에서 자주 사용됩니다.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">질문 2: 아코디언 UI의 장점은 무엇인가요?</h2>
+      <div class="accordion-content">
+        <p>아코디언 UI는 공간을 절약하고, 사용자가 필요한 정보만 볼 수 있도록 도와줍니다. 또한, 페이지를 깔끔하게 유지하는 데 도움이 됩니다.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">질문 3: 아코디언 UI를 어떻게 구현하나요?</h2>
+      <div class="accordion-content">
+        <p>아코디언 UI는 HTML, CSS, 그리고 JavaScript를 사용하여 구현할 수 있습니다. HTML로 구조를 만들고, CSS로 스타일링하며, JavaScript로 상호작용을 추가합니다.</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    // FAQ 아코디언 ui
+    // 기본은 아코디언 콘텐츠는 숨김
+    // 클릭시 해당 콘텐츠 표시하고 나머지는 숨김
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+        const isActive = content.style.display === 'block';
+        
+        // 모든 콘텐츠 숨김
+        document.querySelectorAll('.accordion-content').forEach(c => c.style.display = 'none');
+        
+        // 클릭한 콘텐츠 표시
+        if (!isActive) {
+          content.style.display = 'block';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
