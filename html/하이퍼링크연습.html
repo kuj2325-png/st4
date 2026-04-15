@@ -7,6 +7,17 @@
 </head>
 <body>
   <h1>하이퍼링크</h1>
+   <nav>
+    <ul>
+      <!-- li*6>a>{메뉴$} -->
+       <li><a href="#exam1">{메뉴1}</a></li>
+       <li><a href="#exam2">{메뉴2}</a></li>
+       <li><a href="#exam3">{메뉴3}</a></li>
+       <li><a href="#exam4">{메뉴4}</a></li>
+       <li><a href="#exam5">{메뉴5}</a></li>
+       <li><a href="#exam6">{메뉴6}</a></li>
+    </ul>
+  </nav>
   <hr>
   <h2>블록레벨과 인라인레벨</h2>
   <p>네이버</p>
@@ -24,18 +35,65 @@
     <li>href 속성</li>
     <li><pre>href = "url"</pre></li>
    </ul>
-   <h3>하이퍼링크 연습</h3>
+   <h3 id="exam1">하이퍼링크 연습</h3>
    <a href="https://www.naver.com" title="마우스 후버시 툴팁">네이버1</a>
    <a href="https://www.naver.com" title="마우스 후버시 툴팁" target="_blank">네이버2</a>
-   <hr><h3>이미지에 하이퍼링크</h3>
+   <hr>
+   <h3 id="exam2">이미지에 하이퍼링크</h3>
    <a href="https://www.google.co.kr/index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/500px-Google_2015_logo.svg.png" alt="">
   </a>
-  <h3>전화번호에 연결</h3>
+  <h3 id="exam3">전화번호에 연결</h3>
   <p>tel; 프로토콜은 모바일에서만 사용가능</p>
   <a href="tel:010-123-4567">010-123-4567</a>
 
-  <h3>인터넷상의 파일이 아닌 동일 컴(서버)의 파일 연결</h3>
+  <h3 id="exam4">인터넷상의 파일이 아닌 동일 컴(서버)의 파일 연결</h3>
   <a href="상대경로연습.html">상대경로연습1</a>
   <a href="../url연습/상대경로연습2.html">상대경로연습2</a>
+
+  <h3 id="exam6">문서내 이동</h3>
+  <ol>
+    <li>문서내 이동을 원하는 곳에 북마크를 만듭니다
+      <ol>
+        <li>북마크가 될 태그에 아이디를 지정</li>
+        <li>html id를 선언 id="아이디명"</li>
+        <p>html, css 아이디를 호출 #아이디명</p>
+      </ol> 
+    </li>
+    <li>문서내에 북마크로 이동할 수 있는 메뉴링크
+      <ul>
+        <li>a태그의 href="url"</li>
+        <li>a태그의 href="#아이디명"</li>
+      </ul>
+    </li>
+  </ol> 
+
+  <h3>하단메뉴</h3>
+  <nav>
+    <ul>
+      <!-- li*6>a>{메뉴$} -->
+       <li><a href="#exam1">{메뉴1}</a></li>
+       <li><a href="#exam2">{메뉴2}</a></li>
+       <li><a href="#exam3">{메뉴3}</a></li>
+       <li><a href="#exam4">{메뉴4}</a></li>
+       <li><a href="#exam5">{메뉴5}</a></li>
+       <li><a href="#exam6">{메뉴6}</a></li>
+    </ul>
+  </nav>
+
+  <div class="goto">
+    <a href="#">top</a>
+    <a href="#exam6">bottom</a>
+  </div>
+
+  <style>
+    .goto{
+      position: fixed;
+      bottom: 50px;
+      right: 20px;
+    }
+    .goto>a{
+       display: block;
+    }
+  </style>
 </body>
 </html>
