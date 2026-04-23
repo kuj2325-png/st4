@@ -14,19 +14,29 @@
         width: 100%;
         padding: 1em;
         height: 100vh;
+        background-image: url(images/bg.jpg);
+        background-image: url(images/sun.png);
+        background-repeat: no-repeat;
+        background-color: #ac9;
       }
-      .section1{background-color: #f86;}
-      .section2{background-color: #68f;}
-      .section3{background-color: #6f8;}
+      .container-wrap > section1{background-color: #f86;
+      background-position: 0 0;}
+      .container-wrap > section2{
+        background-color: #68f;
+      background-position: center;
+    background-attachment: fixed;}
+      .container-wrap > section3{background-color: #6f8;
+      background-position: 100% 0;
+    background-attachment: scroll;}
   </style>
 </head>
 <body>
   <div class="container-wrap">
   <section class="section1">
-    <p class="title">section3</p>
+    <p class="title">section1</p>
   </section>
   <section class="section2">
-    <p class="title">section3</p>
+    <p class="title">section2</p>
   </section>
   <section class="section3">
     <p class="title">section3</p>
