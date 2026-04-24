@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    h1,h2,h3{font-size: 1.5em;}
+    hr{display: none;}
+
+    .box{
+      background-color: #ccc;;
+      border: 1px solid #f00;
+      margin-top: 100px;
+      padding: 20px 0;
+    }
+    .box1{background-color: #f68;}
+    .box2{background-color: #6f8;}
+    .box3{background-color: #86f;}
+    .box::before{
+      content: "";
+      display: block;
+      background-color: #000;
+      width: 3em; height: 4px;
+      margin: auto;
+      margin-top: -70px;
+    }
+
+    /* .box::after{content: "뒤";} */
+    .box .inner{
+      /* background-color: #efefef; */
+      width: 80%;
+      margin: 0 auto;
+    }
+    .box .inner::before{
+    content: "";
+    display: block;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-bottom: 1em;
+    background-color: #ccc;
+}
+    .box .inner::after{ content: '뒤';}
+
+    .box .content::before{ content: '앞';}
+    .box .content::after{ content: '뒤';}
+  </style>
+</head>
+<body>
+  <h1>가상요소 ::before ::after</h1>
+  <hr>
+  <div class="box box1">
+    <div class="inner">
+      <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ipsum amet, sequi alias ea reprehenderit?</p>
+    </div>
+  </div>
+  <div class="box box2">
+    <div class="inner">
+      <p class="content">Distinctio adipisci iste officia tenetur quibusdam quas quod, assumenda iure. Voluptate reiciendis pariatur sequi atque!</p>
+    </div>
+  </div>
+  <div class="box box3">
+    <div class="inner">
+      <p class="content">Nemo ipsum cum accusantium unde autem ratione nobis, dolore veniam aspernatur quia officiis atque qui!</p>
+    </div>
+  </div>
+</body>
+</html>
