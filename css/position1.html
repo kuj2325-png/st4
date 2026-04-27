@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    .wrap{
+      width: 85%;
+      margin: 0 auto;
+      background-color: #ccc;
+      padding: 30px;
+      border: 10px dashed #999;
+    }
+    .parent{padding: 10px;}
+    .parent:nth-child(1){
+      background-color: #f86;
+    }
+    .parent:nth-child(2){
+      background-color: #6f8;
+    }
+    .parent:nth-child(3){
+      background-color: #86f;
+    }
+    .parent:nth-child(4){
+      background-color: #cf6;
+    }
+    .parent:nth-child(5){
+      background-color: #c8f;
+    }
+    .parent .child{
+      width: 50px; height: 50px;
+      padding: 10px;
+    }
+    .parent .parent:nth-child(1){
+      background-color: #fff;
+    }
+    .parent .parent:nth-child(2){
+      background-color: #0dd;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrao">
+    <div class="parent">
+      <div class="child">
+        <div class="box">box1</div>
+      </div>
+      <div class="child">
+        <div class="box">box2</div>
+      </div>
+    </div>
+    <div class="parent">
+      <div class="child">
+        <div class="box">box1</div>
+      </div>
+      <div class="child">
+        <div class="box">box2</div>
+      </div>
+    </div>
+    <div class="parent">
+      <div class="child">
+        <div class="box">box1</div>
+      </div>
+      <div class="child">
+        <div class="box">box2</div>
+      </div>
+    </div>
+    <div class="parent">
+      <div class="child">
+        <div class="box">box1</div>
+      </div>
+      <div class="child">
+        <div class="box">box2</div>
+      </div>
+    </div>
+    <div class="parent">
+      <div class="child">
+        <div class="box">box1</div>
+      </div>
+      <div class="child">
+        <div class="box">box2</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

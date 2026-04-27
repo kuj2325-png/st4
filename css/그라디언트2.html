@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>오로라 메시 그라디언트</title>
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			width: 100vw;
+			height: 100vh;
+			overflow: hidden;
+			box-sizing: border-box;
+			position: relative;
+		}
+		.exam {
+			position: absolute;
+			top: 0; left: 0; width: 100vw; height: 100vh;
+			z-index: 1;
+			/* 메시 오로라 그라디언트 */
+			background: 
+				radial-gradient(circle at 20% 30%, cyan 0 20%, transparent 60%),
+				radial-gradient(circle at 80% 20%, #e7ca0e 0 25%, transparent 60%),
+				radial-gradient(circle at 60% 70%, magenta 0 25%, transparent 60%),
+				radial-gradient(circle at 30% 80%, purple 0 30%, transparent 60%);
+			background-blend-mode: screen;
+		}
+		.text {
+			position: absolute;
+			left: 0; right: 0; bottom: 5vh;
+			z-index: 2;
+			text-align: center;
+			color: #fff;
+			font-family: 'Montserrat', 'Pretendard', Arial, sans-serif;
+			font-size: 2.5rem;
+			font-weight: bold;
+			letter-spacing: 0.2em;
+			text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+			/* 텍스트 내용은 위치만 */
+		}
+	</style>
+</head>
+<body>
+	<div class="exam"></div>
+	<div class="text">GRADIENT<br><span style="font-size:1.2rem;font-weight:400;letter-spacing:0.1em;">COVER DESIGN</span></div>
+</body>
+</html>
