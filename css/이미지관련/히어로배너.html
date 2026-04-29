@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .hero-banner{width: 100%;}
+    .hero-banner picture{
+      display: block;
+      background-color: #f00;
+    }
+    .hero-banner picture source,
+    .hero-banner picture img{
+      width: 100%;
+      display: block;
+    }
+    .hero-banner picture source{}
+    .hero-banner picture img{}
+    @media (max-width:768px){
+      .hero-banner picture source,
+      .hero-banner picture img{
+        opacity: 0.5;
+        width: 100%;
+        height: calc(100vh - (50px+50px));
+        object-fit: cover;
+        object-position: left bottom;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero-banner">
+      <picture>
+        <source srcset="../images/9d4be2e1-39cb-44ae-8ed9-7d59e82cc28f.png" media="(max-width:768px);">
+        <img src="../images/253b9c2b-1689-419d-aed6-bf97eea370ba.png" alt="">
+
+      </picture>
+    </div>
+  </div>
+</body>
+</html>
