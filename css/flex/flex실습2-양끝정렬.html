@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex 실습2 양끝정렬</title>
+  <link rel="stylesheet" href="../reset.css">
+    <!-- 
+  1. flex 선언   container
+  2. flex의 방향을 결정  container
+  3. 아이템의 축소/확장을 결정 item
+  4. 아이템의 크기결정 item
+  5. 아이템이 줄바꿈을 결정 container
+  6. 여백관리 gap container  margin item
+  7. 정렬  container / item  , margin
+  -->
+  <style>
+    /* 모양 */
+    .inner{background-color: #ccc;}
+    #top_nav_box{background-color: #fcc; box-sizing: border-box;}
+    #top_nav_box>div{box-sizing: border-box; padding: 0.5rem;}
+    #top_nav_box .top_logo{background-color: beige;}
+    #top_nav_box .top_category{background-color: dodgerblue;}
+    #top_nav_box .top_mypage{background-color: purple;}
+
+    /* 크기 */
+    /* #top_nav_box .top_logo{ width:100px}
+    #top_nav_box .top_category{min-width:600px; max-width:700px}
+    #top_nav_box .top_mypage{width:150px} */
+
+    /* flex */
+    .inner{ 
+      width:90%;
+      display: flex;
+      /* 2,5,6,기본 */
+      /* 7 */
+      /* flex container내 item정렬 justify-content: center;*/
+      margin:0 auto;
+
+
+    }
+    /* flex container */
+    #top_nav_box{
+      width:100%;
+      /* 1 */
+      display: flex;
+      /* 2 flex-direction: row;*/
+      /* 5 줄바꿈 flex-wrap: nowrap;*/
+      /* 6 gap->container margin->item */
+      /* 7정렬 */
+      /* 주축정렬 */
+      justify-content: space-between;
+      /* 교차축정렬 */
+    }
+    /* flex item */
+    #top_nav_box > div{
+      /* 3확장 flex-grow: 0; */
+      /*3축소 flex-shrink: 1; */
+      /*4  flex-basis: auto; 주축의 크기(너비,높이)를 따른다*/
+    }
+    #top_nav_box .top_logo{}
+    #top_nav_box .top_category{}
+    #top_nav_box .top_mypage{}
+  </style>
+</head>
+<body>
+  <div class="inner">
+    <div class="top_nav_box" id="top_nav_box">
+      <div class="top_logo">로고</div>
+      <div class="top_mypage">마이페이지</div>
+    </div>
+    <!-- //#top_nav_box -->
+  </div>
+  <!-- //.inner -->
+</body>
+</html>

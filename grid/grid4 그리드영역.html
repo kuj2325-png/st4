@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <link rel="stylesheet" href="../reset.css">
+  <style>
+    .wrap{
+      display: grid;
+      grid-template-rows: 150px 500px 300px;
+      grid-template-columns: 250px 1fr;
+      grid-template-areas: "hd hd"
+      "inb mc"
+      ". footer";
+    }
+    header{
+      background-color: #ccc;
+    }
+    aside{
+      background-color: #fcc;
+    }
+    .main-content{
+      background-color: #ccf;
+    }
+    footer{
+      background-color: #cfc;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>헤더
+
+    </header>
+    <aside>LNB</aside>
+    <main class="main-content">페이지내용</main>
+    <footer>푸터</footer>
+  </div>
+</body>
+</html>
