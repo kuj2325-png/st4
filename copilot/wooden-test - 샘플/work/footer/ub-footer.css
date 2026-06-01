@@ -8,15 +8,21 @@
 
 .inner_t {
     display: grid;
-    grid-template-columns: minmax(220px, 260px) minmax(320px, 1fr) minmax(220px, 260px);
+    grid-template-columns: 1fr;
     gap: 24px;
-    align-items: start;
     padding: 60px 0 30px;
 }
 
-.info_left,
-.info_center,
-.info_right {
+.row {
+    display: grid;
+    grid-template-columns: minmax(220px, 260px) minmax(320px, 1fr) minmax(220px, 260px);
+    align-items: start;
+    gap: 24px;
+}
+
+.row-item--left,
+.row-item--center,
+.row-item--right {
     min-width: 0;
 }
 
